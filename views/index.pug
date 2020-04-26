@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  if user
+    p Hello #{user.firstName}
+  else
+    a(href='http://localhost:9011/oauth2/authorize?client_id=9822f717-6a43-419a-a2f1-764100a3f50f&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Foauth-redirect') Login
+
+  p Welcome to #{title}
